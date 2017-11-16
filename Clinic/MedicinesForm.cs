@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Clinic
 {
-    public partial class Form1 : Form
+    public partial class MedicinesForm : Form
     {
-        public Form1()
+        public MedicinesForm()
         {
             InitializeComponent();
+        }
+
+        private void buttonSaveMedicines_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonGenetatePrescription_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
