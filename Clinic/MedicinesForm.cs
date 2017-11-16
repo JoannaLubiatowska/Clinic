@@ -26,5 +26,12 @@ namespace Clinic
         {
 
         }
+
+        private void MedicinesForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dataSet.Medicines_view' table. You can move, or remove it, as needed.
+            this.medicines_viewTableAdapter.Fill(this.dataSet.Medicines_view);
+
+        }
     }
 }

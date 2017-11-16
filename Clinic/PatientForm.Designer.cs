@@ -348,7 +348,7 @@
             this.Controls.Add(streetLabel1);
             this.Controls.Add(pESELLabel);
             this.Name = "PatientForm";
-            this.Text = "PatientForm";
+            this.Text = "Pacjent";
             this.ResumeLayout(false);
             this.PerformLayout();
 

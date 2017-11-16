@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label medicalSpecialistLabel;
             System.Windows.Forms.Label visitDateLabel;
             System.Windows.Forms.Label label22;
@@ -141,6 +142,35 @@
             this.buttonDeleteEmployee = new System.Windows.Forms.Button();
             this.buttonAddEmployee = new System.Windows.Forms.Button();
             this.buttonEditEployee = new System.Windows.Forms.Button();
+            this.patients_viewDataGridView = new System.Windows.Forms.DataGridView();
+            this.employee_viewDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.patients_viewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet = new Clinic.DataSet();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.employee_viewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.patients_viewTableAdapter = new Clinic.DataSetTableAdapters.Patients_viewTableAdapter();
+            this.tableAdapterManager = new Clinic.DataSetTableAdapters.TableAdapterManager();
+            this.employee_viewTableAdapter = new Clinic.DataSetTableAdapters.Employee_viewTableAdapter();
+            this.medicalServicesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.medicalServicesTableAdapter = new Clinic.DataSetTableAdapters.MedicalServicesTableAdapter();
+            this.medicalServicesDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             medicalSpecialistLabel = new System.Windows.Forms.Label();
             visitDateLabel = new System.Windows.Forms.Label();
             label22 = new System.Windows.Forms.Label();
@@ -188,6 +218,13 @@
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.patients_viewDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employee_viewDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patients_viewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employee_viewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medicalServicesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medicalServicesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
@@ -228,6 +265,8 @@
             // 
             // tabPatients
             // 
+            this.tabPatients.AutoScroll = true;
+            this.tabPatients.Controls.Add(this.patients_viewDataGridView);
             this.tabPatients.Controls.Add(this.checkBoxShowArchives);
             this.tabPatients.Controls.Add(this.label6);
             this.tabPatients.Controls.Add(this.buttonDeletePatient);
@@ -378,6 +417,7 @@
             // 
             // tabAdministration
             // 
+            this.tabAdministration.AutoScroll = true;
             this.tabAdministration.Controls.Add(this.groupBox9);
             this.tabAdministration.Controls.Add(this.groupBox8);
             this.tabAdministration.Controls.Add(this.groupBox7);
@@ -468,7 +508,7 @@
             // 
             // buttonAddPatient
             // 
-            this.buttonAddPatient.Location = new System.Drawing.Point(1041, 17);
+            this.buttonAddPatient.Location = new System.Drawing.Point(1054, 16);
             this.buttonAddPatient.Name = "buttonAddPatient";
             this.buttonAddPatient.Size = new System.Drawing.Size(136, 23);
             this.buttonAddPatient.TabIndex = 21;
@@ -478,7 +518,7 @@
             // 
             // buttonDeletePatient
             // 
-            this.buttonDeletePatient.Location = new System.Drawing.Point(1041, 617);
+            this.buttonDeletePatient.Location = new System.Drawing.Point(1054, 617);
             this.buttonDeletePatient.Name = "buttonDeletePatient";
             this.buttonDeletePatient.Size = new System.Drawing.Size(136, 23);
             this.buttonDeletePatient.TabIndex = 23;
@@ -488,7 +528,7 @@
             // 
             // buttonEditPatient
             // 
-            this.buttonEditPatient.Location = new System.Drawing.Point(899, 617);
+            this.buttonEditPatient.Location = new System.Drawing.Point(912, 617);
             this.buttonEditPatient.Name = "buttonEditPatient";
             this.buttonEditPatient.Size = new System.Drawing.Size(136, 23);
             this.buttonEditPatient.TabIndex = 22;
@@ -1147,6 +1187,7 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.employee_viewDataGridView);
             this.groupBox7.Controls.Add(this.buttonDeleteEmployee);
             this.groupBox7.Controls.Add(this.buttonAddEmployee);
             this.groupBox7.Controls.Add(this.buttonEditEployee);
@@ -1159,11 +1200,12 @@
             // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.medicalServicesDataGridView);
             this.groupBox8.Controls.Add(this.buttonDeleteService);
             this.groupBox8.Controls.Add(this.buttonEditService);
             this.groupBox8.Location = new System.Drawing.Point(743, 6);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(446, 461);
+            this.groupBox8.Size = new System.Drawing.Size(446, 456);
             this.groupBox8.TabIndex = 1;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Usługi";
@@ -1245,7 +1287,7 @@
             // 
             // buttonDeleteService
             // 
-            this.buttonDeleteService.Location = new System.Drawing.Point(162, 432);
+            this.buttonDeleteService.Location = new System.Drawing.Point(162, 427);
             this.buttonDeleteService.Name = "buttonDeleteService";
             this.buttonDeleteService.Size = new System.Drawing.Size(136, 23);
             this.buttonDeleteService.TabIndex = 9;
@@ -1255,7 +1297,7 @@
             // 
             // buttonEditService
             // 
-            this.buttonEditService.Location = new System.Drawing.Point(304, 432);
+            this.buttonEditService.Location = new System.Drawing.Point(304, 427);
             this.buttonEditService.Name = "buttonEditService";
             this.buttonEditService.Size = new System.Drawing.Size(136, 23);
             this.buttonEditService.TabIndex = 8;
@@ -1293,12 +1335,210 @@
             this.buttonEditEployee.UseVisualStyleBackColor = true;
             this.buttonEditEployee.Click += new System.EventHandler(this.buttonEditEployee_Click);
             // 
+            // patients_viewDataGridView
+            // 
+            this.patients_viewDataGridView.AutoGenerateColumns = false;
+            this.patients_viewDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.patients_viewDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewCheckBoxColumn1});
+            this.patients_viewDataGridView.DataSource = this.patients_viewBindingSource;
+            this.patients_viewDataGridView.Location = new System.Drawing.Point(9, 58);
+            this.patients_viewDataGridView.Name = "patients_viewDataGridView";
+            this.patients_viewDataGridView.Size = new System.Drawing.Size(1181, 553);
+            this.patients_viewDataGridView.TabIndex = 25;
+            // 
+            // employee_viewDataGridView
+            // 
+            this.employee_viewDataGridView.AutoGenerateColumns = false;
+            this.employee_viewDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.employee_viewDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewCheckBoxColumn2});
+            this.employee_viewDataGridView.DataSource = this.employee_viewBindingSource;
+            this.employee_viewDataGridView.Location = new System.Drawing.Point(6, 19);
+            this.employee_viewDataGridView.Name = "employee_viewDataGridView";
+            this.employee_viewDataGridView.Size = new System.Drawing.Size(716, 591);
+            this.employee_viewDataGridView.TabIndex = 6;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Imię";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Imię";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nazwisko";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nazwisko";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "PESEL";
+            this.dataGridViewTextBoxColumn3.HeaderText = "PESEL";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Numer telefonu";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Numer telefonu";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Ulica";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Ulica";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Numer";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Numer";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Kod pocztowy";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Kod pocztowy";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Miasto";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Miasto";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Województwo";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Województwo";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Zapisany";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Zapisany";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            // 
+            // patients_viewBindingSource
+            // 
+            this.patients_viewBindingSource.DataMember = "Patients_view";
+            this.patients_viewBindingSource.DataSource = this.dataSet;
+            // 
+            // dataSet
+            // 
+            this.dataSet.DataSetName = "DataSet";
+            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Imię";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Imię";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Nazwisko";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Nazwisko";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "Numer telefonu";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Numer telefonu";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "Opis";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Opis";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            // 
+            // dataGridViewCheckBoxColumn2
+            // 
+            this.dataGridViewCheckBoxColumn2.DataPropertyName = "Zatrudniony";
+            this.dataGridViewCheckBoxColumn2.HeaderText = "Zatrudniony";
+            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
+            // 
+            // employee_viewBindingSource
+            // 
+            this.employee_viewBindingSource.DataMember = "Employee_view";
+            this.employee_viewBindingSource.DataSource = this.dataSet;
+            // 
+            // patients_viewTableAdapter
+            // 
+            this.patients_viewTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.MedicalServicesTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Clinic.DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // employee_viewTableAdapter
+            // 
+            this.employee_viewTableAdapter.ClearBeforeFill = true;
+            // 
+            // medicalServicesBindingSource
+            // 
+            this.medicalServicesBindingSource.DataMember = "MedicalServices";
+            this.medicalServicesBindingSource.DataSource = this.dataSet;
+            // 
+            // medicalServicesTableAdapter
+            // 
+            this.medicalServicesTableAdapter.ClearBeforeFill = true;
+            // 
+            // medicalServicesDataGridView
+            // 
+            this.medicalServicesDataGridView.AutoGenerateColumns = false;
+            this.medicalServicesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.medicalServicesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15});
+            this.medicalServicesDataGridView.DataSource = this.medicalServicesBindingSource;
+            this.medicalServicesDataGridView.Location = new System.Drawing.Point(9, 19);
+            this.medicalServicesDataGridView.Name = "medicalServicesDataGridView";
+            this.medicalServicesDataGridView.Size = new System.Drawing.Size(431, 402);
+            this.medicalServicesDataGridView.TabIndex = 9;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "ServiceName";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Nazwa usługi";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "ServiceDescription";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Opis";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "Price";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Cena";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
             // MainClinicWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1204, 716);
+            this.ClientSize = new System.Drawing.Size(1205, 716);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.labelLoginName);
             this.Controls.Add(this.label10);
@@ -1306,6 +1546,7 @@
             this.Controls.Add(this.tabControl);
             this.Name = "MainClinicWindow";
             this.Text = "Okno główne";
+            this.Load += new System.EventHandler(this.MainClinicWindow_Load);
             this.tabControl.ResumeLayout(false);
             this.tabSchedule.ResumeLayout(false);
             this.tabSchedule.PerformLayout();
@@ -1331,6 +1572,13 @@
             this.groupBox8.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.patients_viewDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employee_viewDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patients_viewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employee_viewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medicalServicesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medicalServicesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1419,6 +1667,35 @@
         private System.Windows.Forms.Button buttonDeleteEmployee;
         private System.Windows.Forms.Button buttonAddEmployee;
         private System.Windows.Forms.Button buttonEditEployee;
+        private DataSet dataSet;
+        private System.Windows.Forms.BindingSource patients_viewBindingSource;
+        private DataSetTableAdapters.Patients_viewTableAdapter patients_viewTableAdapter;
+        private DataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridView patients_viewDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.BindingSource employee_viewBindingSource;
+        private DataSetTableAdapters.Employee_viewTableAdapter employee_viewTableAdapter;
+        private System.Windows.Forms.DataGridView employee_viewDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
+        private System.Windows.Forms.BindingSource medicalServicesBindingSource;
+        private DataSetTableAdapters.MedicalServicesTableAdapter medicalServicesTableAdapter;
+        private System.Windows.Forms.DataGridView medicalServicesDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
     }
 }
 

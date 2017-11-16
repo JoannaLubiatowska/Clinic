@@ -133,5 +133,18 @@ namespace Clinic
                 return false;
             }
         }
+
+        private void MainClinicWindow_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dataSet.MedicalServices' table. You can move, or remove it, as needed.
+            this.medicalServicesTableAdapter.Fill(this.dataSet.MedicalServices);
+            // TODO: This line of code loads data into the 'dataSet.Employee_view' table. You can move, or remove it, as needed.
+            this.employee_viewTableAdapter.Fill(this.dataSet.Employee_view);
+            // TODO: This line of code loads data into the 'dataSet.Employee_view' table. You can move, or remove it, as needed.
+            this.employee_viewTableAdapter.Fill(this.dataSet.Employee_view);
+            // TODO: This line of code loads data into the 'dataSet.Patients_view' table. You can move, or remove it, as needed.
+            this.patients_viewTableAdapter.Fill(this.dataSet.Patients_view);
+
+        }
     }
 }

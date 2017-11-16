@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet" targetNamespace="http://tempuri.org/DataSet.xsd" xmlns:mstns="http://tempuri.org/DataSet.xsd" xmlns="http://tempuri.org/DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ClinicConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ClinicConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Clinic.Properties.Settings.GlobalReference.Default.ClinicConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Employee_viewTableAdapter" GeneratorDataComponentClassName="Employee_viewTableAdapter" Name="Employee_view" UserDataComponentName="Employee_viewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ClinicConnectionString (Settings)" DbObjectName="Clinic.dbo.Employee_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Imię, Nazwisko, Ulica, Numer, [Kod pocztowy], Miasto, Województwo, [Numer telefonu], Zdjęcie, Opis, Zatrudniony FROM dbo.Employee_view</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Imię" DataSetColumn="Imię" />
+              <Mapping SourceColumn="Nazwisko" DataSetColumn="Nazwisko" />
+              <Mapping SourceColumn="Ulica" DataSetColumn="Ulica" />
+              <Mapping SourceColumn="Numer" DataSetColumn="Numer" />
+              <Mapping SourceColumn="Kod pocztowy" DataSetColumn="Kod pocztowy" />
+              <Mapping SourceColumn="Miasto" DataSetColumn="Miasto" />
+              <Mapping SourceColumn="Województwo" DataSetColumn="Województwo" />
+              <Mapping SourceColumn="Numer telefonu" DataSetColumn="Numer telefonu" />
+              <Mapping SourceColumn="Zdjęcie" DataSetColumn="Zdjęcie" />
+              <Mapping SourceColumn="Opis" DataSetColumn="Opis" />
+              <Mapping SourceColumn="Zatrudniony" DataSetColumn="Zatrudniony" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Patients_viewTableAdapter" GeneratorDataComponentClassName="Patients_viewTableAdapter" Name="Patients_view" UserDataComponentName="Patients_viewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ClinicConnectionString (Settings)" DbObjectName="Clinic.dbo.Patients_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Imię, Nazwisko, PESEL, [Numer telefonu], Ulica, Numer, [Kod pocztowy], Miasto, Województwo, Zapisany FROM dbo.Patients_view</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Imię" DataSetColumn="Imię" />
+              <Mapping SourceColumn="Nazwisko" DataSetColumn="Nazwisko" />
+              <Mapping SourceColumn="PESEL" DataSetColumn="PESEL" />
+              <Mapping SourceColumn="Numer telefonu" DataSetColumn="Numer telefonu" />
+              <Mapping SourceColumn="Ulica" DataSetColumn="Ulica" />
+              <Mapping SourceColumn="Numer" DataSetColumn="Numer" />
+              <Mapping SourceColumn="Kod pocztowy" DataSetColumn="Kod pocztowy" />
+              <Mapping SourceColumn="Miasto" DataSetColumn="Miasto" />
+              <Mapping SourceColumn="Województwo" DataSetColumn="Województwo" />
+              <Mapping SourceColumn="Zapisany" DataSetColumn="Zapisany" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Medicines_viewTableAdapter" GeneratorDataComponentClassName="Medicines_viewTableAdapter" Name="Medicines_view" UserDataComponentName="Medicines_viewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ClinicConnectionString (Settings)" DbObjectName="Clinic.dbo.Medicines_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Nazwa, Dawkowanie, Gramatura, VisitID FROM dbo.Medicines_view</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Nazwa" DataSetColumn="Nazwa" />
+              <Mapping SourceColumn="Dawkowanie" DataSetColumn="Dawkowanie" />
+              <Mapping SourceColumn="Gramatura" DataSetColumn="Gramatura" />
+              <Mapping SourceColumn="VisitID" DataSetColumn="VisitID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MedicalServicesTableAdapter" GeneratorDataComponentClassName="MedicalServicesTableAdapter" Name="MedicalServices" UserDataComponentName="MedicalServicesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ClinicConnectionString (Settings)" DbObjectName="Clinic.dbo.MedicalServices" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[MedicalServices] WHERE (([MedicalServiceID] = @Original_MedicalServiceID) AND ([ServiceName] = @Original_ServiceName) AND ((@IsNull_ServiceDescription = 1 AND [ServiceDescription] IS NULL) OR ([ServiceDescription] = @Original_ServiceDescription)) AND ([Price] = @Original_Price))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MedicalServiceID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MedicalServiceID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ServiceName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ServiceName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ServiceDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ServiceDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ServiceDescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ServiceDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[MedicalServices] ([ServiceName], [ServiceDescription], [Price]) VALUES (@ServiceName, @ServiceDescription, @Price);
+SELECT MedicalServiceID, ServiceName, ServiceDescription, Price FROM MedicalServices WHERE (MedicalServiceID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ServiceName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ServiceName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ServiceDescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ServiceDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MedicalServiceID, ServiceName, ServiceDescription, Price FROM dbo.MedicalServices</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[MedicalServices] SET [ServiceName] = @ServiceName, [ServiceDescription] = @ServiceDescription, [Price] = @Price WHERE (([MedicalServiceID] = @Original_MedicalServiceID) AND ([ServiceName] = @Original_ServiceName) AND ((@IsNull_ServiceDescription = 1 AND [ServiceDescription] IS NULL) OR ([ServiceDescription] = @Original_ServiceDescription)) AND ([Price] = @Original_Price));
+SELECT MedicalServiceID, ServiceName, ServiceDescription, Price FROM MedicalServices WHERE (MedicalServiceID = @MedicalServiceID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ServiceName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ServiceName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ServiceDescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ServiceDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MedicalServiceID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MedicalServiceID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ServiceName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ServiceName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ServiceDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ServiceDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ServiceDescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ServiceDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Price" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="MedicalServiceID" ColumnName="MedicalServiceID" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@MedicalServiceID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="MedicalServiceID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MedicalServiceID" DataSetColumn="MedicalServiceID" />
+              <Mapping SourceColumn="ServiceName" DataSetColumn="ServiceName" />
+              <Mapping SourceColumn="ServiceDescription" DataSetColumn="ServiceDescription" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet" msprop:Generator_UserDSName="DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Employee_view" msprop:Generator_TableClassName="Employee_viewDataTable" msprop:Generator_TableVarName="tableEmployee_view" msprop:Generator_RowChangedName="Employee_viewRowChanged" msprop:Generator_TablePropName="Employee_view" msprop:Generator_RowDeletingName="Employee_viewRowDeleting" msprop:Generator_RowChangingName="Employee_viewRowChanging" msprop:Generator_RowEvHandlerName="Employee_viewRowChangeEventHandler" msprop:Generator_RowDeletedName="Employee_viewRowDeleted" msprop:Generator_RowClassName="Employee_viewRow" msprop:Generator_UserTableName="Employee_view" msprop:Generator_RowEvArgName="Employee_viewRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Imię" msprop:Generator_ColumnVarNameInTable="columnImię" msprop:Generator_ColumnPropNameInRow="Imię" msprop:Generator_ColumnPropNameInTable="ImięColumn" msprop:Generator_UserColumnName="Imię">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nazwisko" msprop:Generator_ColumnVarNameInTable="columnNazwisko" msprop:Generator_ColumnPropNameInRow="Nazwisko" msprop:Generator_ColumnPropNameInTable="NazwiskoColumn" msprop:Generator_UserColumnName="Nazwisko">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ulica" msprop:Generator_ColumnVarNameInTable="columnUlica" msprop:Generator_ColumnPropNameInRow="Ulica" msprop:Generator_ColumnPropNameInTable="UlicaColumn" msprop:Generator_UserColumnName="Ulica">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Numer" msprop:Generator_ColumnVarNameInTable="columnNumer" msprop:Generator_ColumnPropNameInRow="Numer" msprop:Generator_ColumnPropNameInTable="NumerColumn" msprop:Generator_UserColumnName="Numer">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Kod_x0020_pocztowy" msprop:Generator_ColumnVarNameInTable="columnKod_pocztowy" msprop:Generator_ColumnPropNameInRow="Kod_pocztowy" msprop:Generator_ColumnPropNameInTable="Kod_pocztowyColumn" msprop:Generator_UserColumnName="Kod pocztowy">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Miasto" msprop:Generator_ColumnVarNameInTable="columnMiasto" msprop:Generator_ColumnPropNameInRow="Miasto" msprop:Generator_ColumnPropNameInTable="MiastoColumn" msprop:Generator_UserColumnName="Miasto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Województwo" msprop:Generator_ColumnVarNameInTable="columnWojewództwo" msprop:Generator_ColumnPropNameInRow="Województwo" msprop:Generator_ColumnPropNameInTable="WojewództwoColumn" msprop:Generator_UserColumnName="Województwo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Numer_x0020_telefonu" msprop:Generator_ColumnVarNameInTable="columnNumer_telefonu" msprop:Generator_ColumnPropNameInRow="Numer_telefonu" msprop:Generator_ColumnPropNameInTable="Numer_telefonuColumn" msprop:Generator_UserColumnName="Numer telefonu" type="xs:int" />
+              <xs:element name="Zdjęcie" msprop:Generator_ColumnVarNameInTable="columnZdjęcie" msprop:Generator_ColumnPropNameInRow="Zdjęcie" msprop:Generator_ColumnPropNameInTable="ZdjęcieColumn" msprop:Generator_UserColumnName="Zdjęcie" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Opis" msprop:Generator_ColumnVarNameInTable="columnOpis" msprop:Generator_ColumnPropNameInRow="Opis" msprop:Generator_ColumnPropNameInTable="OpisColumn" msprop:Generator_UserColumnName="Opis" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Zatrudniony" msprop:Generator_ColumnVarNameInTable="columnZatrudniony" msprop:Generator_ColumnPropNameInRow="Zatrudniony" msprop:Generator_ColumnPropNameInTable="ZatrudnionyColumn" msprop:Generator_UserColumnName="Zatrudniony" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Patients_view" msprop:Generator_TableClassName="Patients_viewDataTable" msprop:Generator_TableVarName="tablePatients_view" msprop:Generator_RowChangedName="Patients_viewRowChanged" msprop:Generator_TablePropName="Patients_view" msprop:Generator_RowDeletingName="Patients_viewRowDeleting" msprop:Generator_RowChangingName="Patients_viewRowChanging" msprop:Generator_RowEvHandlerName="Patients_viewRowChangeEventHandler" msprop:Generator_RowDeletedName="Patients_viewRowDeleted" msprop:Generator_RowClassName="Patients_viewRow" msprop:Generator_UserTableName="Patients_view" msprop:Generator_RowEvArgName="Patients_viewRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Imię" msprop:Generator_ColumnVarNameInTable="columnImię" msprop:Generator_ColumnPropNameInRow="Imię" msprop:Generator_ColumnPropNameInTable="ImięColumn" msprop:Generator_UserColumnName="Imię">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nazwisko" msprop:Generator_ColumnVarNameInTable="columnNazwisko" msprop:Generator_ColumnPropNameInRow="Nazwisko" msprop:Generator_ColumnPropNameInTable="NazwiskoColumn" msprop:Generator_UserColumnName="Nazwisko">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PESEL" msprop:Generator_ColumnVarNameInTable="columnPESEL" msprop:Generator_ColumnPropNameInRow="PESEL" msprop:Generator_ColumnPropNameInTable="PESELColumn" msprop:Generator_UserColumnName="PESEL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Numer_x0020_telefonu" msprop:Generator_ColumnVarNameInTable="columnNumer_telefonu" msprop:Generator_ColumnPropNameInRow="Numer_telefonu" msprop:Generator_ColumnPropNameInTable="Numer_telefonuColumn" msprop:Generator_UserColumnName="Numer telefonu" type="xs:int" />
+              <xs:element name="Ulica" msprop:Generator_ColumnVarNameInTable="columnUlica" msprop:Generator_ColumnPropNameInRow="Ulica" msprop:Generator_ColumnPropNameInTable="UlicaColumn" msprop:Generator_UserColumnName="Ulica">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Numer" msprop:Generator_ColumnVarNameInTable="columnNumer" msprop:Generator_ColumnPropNameInRow="Numer" msprop:Generator_ColumnPropNameInTable="NumerColumn" msprop:Generator_UserColumnName="Numer">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Kod_x0020_pocztowy" msprop:Generator_ColumnVarNameInTable="columnKod_pocztowy" msprop:Generator_ColumnPropNameInRow="Kod_pocztowy" msprop:Generator_ColumnPropNameInTable="Kod_pocztowyColumn" msprop:Generator_UserColumnName="Kod pocztowy">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Miasto" msprop:Generator_ColumnVarNameInTable="columnMiasto" msprop:Generator_ColumnPropNameInRow="Miasto" msprop:Generator_ColumnPropNameInTable="MiastoColumn" msprop:Generator_UserColumnName="Miasto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Województwo" msprop:Generator_ColumnVarNameInTable="columnWojewództwo" msprop:Generator_ColumnPropNameInRow="Województwo" msprop:Generator_ColumnPropNameInTable="WojewództwoColumn" msprop:Generator_UserColumnName="Województwo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Zapisany" msprop:Generator_ColumnVarNameInTable="columnZapisany" msprop:Generator_ColumnPropNameInRow="Zapisany" msprop:Generator_ColumnPropNameInTable="ZapisanyColumn" msprop:Generator_UserColumnName="Zapisany" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Medicines_view" msprop:Generator_TableClassName="Medicines_viewDataTable" msprop:Generator_TableVarName="tableMedicines_view" msprop:Generator_RowChangedName="Medicines_viewRowChanged" msprop:Generator_TablePropName="Medicines_view" msprop:Generator_RowDeletingName="Medicines_viewRowDeleting" msprop:Generator_RowChangingName="Medicines_viewRowChanging" msprop:Generator_RowEvHandlerName="Medicines_viewRowChangeEventHandler" msprop:Generator_RowDeletedName="Medicines_viewRowDeleted" msprop:Generator_RowClassName="Medicines_viewRow" msprop:Generator_UserTableName="Medicines_view" msprop:Generator_RowEvArgName="Medicines_viewRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nazwa" msprop:Generator_ColumnVarNameInTable="columnNazwa" msprop:Generator_ColumnPropNameInRow="Nazwa" msprop:Generator_ColumnPropNameInTable="NazwaColumn" msprop:Generator_UserColumnName="Nazwa">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dawkowanie" msprop:Generator_ColumnVarNameInTable="columnDawkowanie" msprop:Generator_ColumnPropNameInRow="Dawkowanie" msprop:Generator_ColumnPropNameInTable="DawkowanieColumn" msprop:Generator_UserColumnName="Dawkowanie" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Gramatura" msprop:Generator_ColumnVarNameInTable="columnGramatura" msprop:Generator_ColumnPropNameInRow="Gramatura" msprop:Generator_ColumnPropNameInTable="GramaturaColumn" msprop:Generator_UserColumnName="Gramatura">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VisitID" msprop:Generator_ColumnVarNameInTable="columnVisitID" msprop:Generator_ColumnPropNameInRow="VisitID" msprop:Generator_ColumnPropNameInTable="VisitIDColumn" msprop:Generator_UserColumnName="VisitID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MedicalServices" msprop:Generator_TableClassName="MedicalServicesDataTable" msprop:Generator_TableVarName="tableMedicalServices" msprop:Generator_TablePropName="MedicalServices" msprop:Generator_RowDeletingName="MedicalServicesRowDeleting" msprop:Generator_RowChangingName="MedicalServicesRowChanging" msprop:Generator_RowEvHandlerName="MedicalServicesRowChangeEventHandler" msprop:Generator_RowDeletedName="MedicalServicesRowDeleted" msprop:Generator_UserTableName="MedicalServices" msprop:Generator_RowChangedName="MedicalServicesRowChanged" msprop:Generator_RowEvArgName="MedicalServicesRowChangeEvent" msprop:Generator_RowClassName="MedicalServicesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MedicalServiceID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnMedicalServiceID" msprop:Generator_ColumnPropNameInRow="MedicalServiceID" msprop:Generator_ColumnPropNameInTable="MedicalServiceIDColumn" msprop:Generator_UserColumnName="MedicalServiceID" type="xs:int" />
+              <xs:element name="ServiceName" msprop:Generator_ColumnVarNameInTable="columnServiceName" msprop:Generator_ColumnPropNameInRow="ServiceName" msprop:Generator_ColumnPropNameInTable="ServiceNameColumn" msprop:Generator_UserColumnName="ServiceName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceDescription" msprop:Generator_ColumnVarNameInTable="columnServiceDescription" msprop:Generator_ColumnPropNameInRow="ServiceDescription" msprop:Generator_ColumnPropNameInTable="ServiceDescriptionColumn" msprop:Generator_UserColumnName="ServiceDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:MedicalServices" />
+      <xs:field xpath="mstns:MedicalServiceID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

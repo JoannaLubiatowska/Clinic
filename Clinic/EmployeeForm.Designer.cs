@@ -423,7 +423,7 @@
             this.Controls.Add(userLoginLabel);
             this.Controls.Add(streetLabel1);
             this.Name = "EmployeeForm";
-            this.Text = "EmployeeForm";
+            this.Text = "Pracownik";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
