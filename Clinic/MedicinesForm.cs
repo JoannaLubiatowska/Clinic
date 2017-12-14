@@ -19,12 +19,20 @@ namespace Clinic
 
         private void buttonSaveMedicines_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Zapisano pomyślnie.");
         }
 
         private void buttonGenetatePrescription_Click(object sender, EventArgs e)
         {
-
+            DialogResult dialogResult = MessageBox.Show("Czy wygenerować receptę?", "Generowanie recepty", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                //do something
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
         }
 
         private void MedicinesForm_Load(object sender, EventArgs e)

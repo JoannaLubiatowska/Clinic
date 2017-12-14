@@ -33,7 +33,6 @@
             System.Windows.Forms.Label cityIDLabel1;
             System.Windows.Forms.Label phoneNumberLabel1;
             System.Windows.Forms.Label label13;
-            System.Windows.Forms.Label label2;
             System.Windows.Forms.Label firstNameLabel1;
             System.Windows.Forms.Label postalCodeLabel1;
             System.Windows.Forms.Label lastNameLabel1;
@@ -42,27 +41,25 @@
             System.Windows.Forms.Label label4;
             System.Windows.Forms.Label streetLabel1;
             System.Windows.Forms.Label pESELLabel;
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBoxNewPatientPostalCode = new System.Windows.Forms.TextBox();
+            this.textBoxNewPatientStreet = new System.Windows.Forms.TextBox();
+            this.textBoxNewPatientStreetNo = new System.Windows.Forms.TextBox();
+            this.textBoxNewPatientLastName = new System.Windows.Forms.TextBox();
+            this.textBoxNewPatientPasswordConfirm = new System.Windows.Forms.TextBox();
+            this.textBoxLogin = new System.Windows.Forms.TextBox();
+            this.textBoxNewPatientPassword = new System.Windows.Forms.TextBox();
+            this.textBoxNewPatientPhoneNo = new System.Windows.Forms.TextBox();
+            this.textBoxNewPatientPesel = new System.Windows.Forms.TextBox();
             this.buttonAddEmployee = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.checkBoxNewPatientNFZ = new System.Windows.Forms.CheckBox();
+            this.comboBoxNewPatientVoivodeship = new System.Windows.Forms.ComboBox();
+            this.comboBoxNewPatientCity = new System.Windows.Forms.ComboBox();
+            this.textBoxNewPatientFirstName = new System.Windows.Forms.TextBox();
             label5 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             cityIDLabel1 = new System.Windows.Forms.Label();
             phoneNumberLabel1 = new System.Windows.Forms.Label();
             label13 = new System.Windows.Forms.Label();
-            label2 = new System.Windows.Forms.Label();
             firstNameLabel1 = new System.Windows.Forms.Label();
             postalCodeLabel1 = new System.Windows.Forms.Label();
             lastNameLabel1 = new System.Windows.Forms.Label();
@@ -76,7 +73,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(12, 344);
+            label5.Location = new System.Drawing.Point(12, 322);
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(77, 13);
             label5.TabIndex = 65;
@@ -117,15 +114,6 @@
             label13.Size = new System.Drawing.Size(39, 13);
             label13.TabIndex = 63;
             label13.Text = "Hasło:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(12, 322);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(39, 13);
-            label2.TabIndex = 62;
-            label2.Text = "Grupa:";
             // 
             // firstNameLabel1
             // 
@@ -199,79 +187,72 @@
             pESELLabel.TabIndex = 52;
             pESELLabel.Text = "PESEL:";
             // 
-            // textBox23
+            // textBoxNewPatientPostalCode
             // 
-            this.textBox23.Location = new System.Drawing.Point(113, 110);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(242, 20);
-            this.textBox23.TabIndex = 70;
+            this.textBoxNewPatientPostalCode.Location = new System.Drawing.Point(113, 110);
+            this.textBoxNewPatientPostalCode.Name = "textBoxNewPatientPostalCode";
+            this.textBoxNewPatientPostalCode.Size = new System.Drawing.Size(242, 20);
+            this.textBoxNewPatientPostalCode.TabIndex = 70;
             // 
-            // textBox24
+            // textBoxNewPatientStreet
             // 
-            this.textBox24.Location = new System.Drawing.Point(113, 58);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(242, 20);
-            this.textBox24.TabIndex = 69;
+            this.textBoxNewPatientStreet.Location = new System.Drawing.Point(113, 58);
+            this.textBoxNewPatientStreet.Name = "textBoxNewPatientStreet";
+            this.textBoxNewPatientStreet.Size = new System.Drawing.Size(242, 20);
+            this.textBoxNewPatientStreet.TabIndex = 69;
             // 
-            // textBox25
+            // textBoxNewPatientStreetNo
             // 
-            this.textBox25.Location = new System.Drawing.Point(113, 84);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(242, 20);
-            this.textBox25.TabIndex = 68;
+            this.textBoxNewPatientStreetNo.Location = new System.Drawing.Point(113, 84);
+            this.textBoxNewPatientStreetNo.Name = "textBoxNewPatientStreetNo";
+            this.textBoxNewPatientStreetNo.Size = new System.Drawing.Size(242, 20);
+            this.textBoxNewPatientStreetNo.TabIndex = 68;
             // 
-            // textBox26
+            // textBoxNewPatientLastName
             // 
-            this.textBox26.Location = new System.Drawing.Point(113, 6);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(242, 20);
-            this.textBox26.TabIndex = 67;
+            this.textBoxNewPatientLastName.Location = new System.Drawing.Point(113, 32);
+            this.textBoxNewPatientLastName.Name = "textBoxNewPatientLastName";
+            this.textBoxNewPatientLastName.Size = new System.Drawing.Size(242, 20);
+            this.textBoxNewPatientLastName.TabIndex = 66;
             // 
-            // textBox27
+            // textBoxNewPatientPasswordConfirm
             // 
-            this.textBox27.Location = new System.Drawing.Point(113, 32);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(242, 20);
-            this.textBox27.TabIndex = 66;
+            this.textBoxNewPatientPasswordConfirm.Location = new System.Drawing.Point(113, 293);
+            this.textBoxNewPatientPasswordConfirm.Name = "textBoxNewPatientPasswordConfirm";
+            this.textBoxNewPatientPasswordConfirm.Size = new System.Drawing.Size(242, 20);
+            this.textBoxNewPatientPasswordConfirm.TabIndex = 77;
             // 
-            // textBox3
+            // textBoxLogin
             // 
-            this.textBox3.Location = new System.Drawing.Point(113, 293);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(242, 20);
-            this.textBox3.TabIndex = 77;
+            this.textBoxLogin.Location = new System.Drawing.Point(113, 241);
+            this.textBoxLogin.Name = "textBoxLogin";
+            this.textBoxLogin.Size = new System.Drawing.Size(242, 20);
+            this.textBoxLogin.TabIndex = 76;
             // 
-            // textBox4
+            // textBoxNewPatientPassword
             // 
-            this.textBox4.Location = new System.Drawing.Point(113, 241);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(242, 20);
-            this.textBox4.TabIndex = 76;
+            this.textBoxNewPatientPassword.Location = new System.Drawing.Point(113, 267);
+            this.textBoxNewPatientPassword.Name = "textBoxNewPatientPassword";
+            this.textBoxNewPatientPassword.Size = new System.Drawing.Size(242, 20);
+            this.textBoxNewPatientPassword.TabIndex = 75;
             // 
-            // textBox5
+            // textBoxNewPatientPhoneNo
             // 
-            this.textBox5.Location = new System.Drawing.Point(113, 267);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(242, 20);
-            this.textBox5.TabIndex = 75;
+            this.textBoxNewPatientPhoneNo.Location = new System.Drawing.Point(113, 189);
+            this.textBoxNewPatientPhoneNo.Name = "textBoxNewPatientPhoneNo";
+            this.textBoxNewPatientPhoneNo.Size = new System.Drawing.Size(242, 20);
+            this.textBoxNewPatientPhoneNo.TabIndex = 74;
             // 
-            // textBox6
+            // textBoxNewPatientPesel
             // 
-            this.textBox6.Location = new System.Drawing.Point(113, 189);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(242, 20);
-            this.textBox6.TabIndex = 74;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(113, 215);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(242, 20);
-            this.textBox7.TabIndex = 73;
+            this.textBoxNewPatientPesel.Location = new System.Drawing.Point(113, 215);
+            this.textBoxNewPatientPesel.Name = "textBoxNewPatientPesel";
+            this.textBoxNewPatientPesel.Size = new System.Drawing.Size(242, 20);
+            this.textBoxNewPatientPesel.TabIndex = 73;
             // 
             // buttonAddEmployee
             // 
-            this.buttonAddEmployee.Location = new System.Drawing.Point(219, 366);
+            this.buttonAddEmployee.Location = new System.Drawing.Point(219, 347);
             this.buttonAddEmployee.Name = "buttonAddEmployee";
             this.buttonAddEmployee.Size = new System.Drawing.Size(136, 23);
             this.buttonAddEmployee.TabIndex = 78;
@@ -279,66 +260,63 @@
             this.buttonAddEmployee.UseVisualStyleBackColor = true;
             this.buttonAddEmployee.Click += new System.EventHandler(this.buttonAddEmployee_Click);
             // 
-            // checkBox1
+            // checkBoxNewPatientNFZ
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(113, 343);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(66, 17);
-            this.checkBox1.TabIndex = 79;
-            this.checkBox1.Text = "Tak/Nie";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxNewPatientNFZ.AutoSize = true;
+            this.checkBoxNewPatientNFZ.Location = new System.Drawing.Point(113, 321);
+            this.checkBoxNewPatientNFZ.Name = "checkBoxNewPatientNFZ";
+            this.checkBoxNewPatientNFZ.Size = new System.Drawing.Size(66, 17);
+            this.checkBoxNewPatientNFZ.TabIndex = 79;
+            this.checkBoxNewPatientNFZ.Text = "Tak/Nie";
+            this.checkBoxNewPatientNFZ.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // comboBoxNewPatientVoivodeship
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(113, 136);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(242, 21);
-            this.comboBox1.TabIndex = 80;
+            this.comboBoxNewPatientVoivodeship.FormattingEnabled = true;
+            this.comboBoxNewPatientVoivodeship.Location = new System.Drawing.Point(113, 136);
+            this.comboBoxNewPatientVoivodeship.Name = "comboBoxNewPatientVoivodeship";
+            this.comboBoxNewPatientVoivodeship.Size = new System.Drawing.Size(242, 21);
+            this.comboBoxNewPatientVoivodeship.TabIndex = 80;
             // 
-            // comboBox2
+            // comboBoxNewPatientCity
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(113, 163);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(242, 21);
-            this.comboBox2.TabIndex = 81;
+            this.comboBoxNewPatientCity.FormattingEnabled = true;
+            this.comboBoxNewPatientCity.Location = new System.Drawing.Point(113, 163);
+            this.comboBoxNewPatientCity.Name = "comboBoxNewPatientCity";
+            this.comboBoxNewPatientCity.Size = new System.Drawing.Size(242, 21);
+            this.comboBoxNewPatientCity.TabIndex = 81;
             // 
-            // comboBox3
+            // textBoxNewPatientFirstName
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(113, 319);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(242, 21);
-            this.comboBox3.TabIndex = 82;
+            this.textBoxNewPatientFirstName.Location = new System.Drawing.Point(113, 6);
+            this.textBoxNewPatientFirstName.Name = "textBoxNewPatientFirstName";
+            this.textBoxNewPatientFirstName.Size = new System.Drawing.Size(242, 20);
+            this.textBoxNewPatientFirstName.TabIndex = 83;
             // 
             // PatientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 401);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.checkBox1);
+            this.ClientSize = new System.Drawing.Size(369, 382);
+            this.Controls.Add(this.textBoxNewPatientFirstName);
+            this.Controls.Add(this.comboBoxNewPatientCity);
+            this.Controls.Add(this.comboBoxNewPatientVoivodeship);
+            this.Controls.Add(this.checkBoxNewPatientNFZ);
             this.Controls.Add(this.buttonAddEmployee);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox23);
-            this.Controls.Add(this.textBox24);
-            this.Controls.Add(this.textBox25);
-            this.Controls.Add(this.textBox26);
-            this.Controls.Add(this.textBox27);
+            this.Controls.Add(this.textBoxNewPatientPasswordConfirm);
+            this.Controls.Add(this.textBoxLogin);
+            this.Controls.Add(this.textBoxNewPatientPassword);
+            this.Controls.Add(this.textBoxNewPatientPhoneNo);
+            this.Controls.Add(this.textBoxNewPatientPesel);
+            this.Controls.Add(this.textBoxNewPatientPostalCode);
+            this.Controls.Add(this.textBoxNewPatientStreet);
+            this.Controls.Add(this.textBoxNewPatientStreetNo);
+            this.Controls.Add(this.textBoxNewPatientLastName);
             this.Controls.Add(label5);
             this.Controls.Add(label1);
             this.Controls.Add(cityIDLabel1);
             this.Controls.Add(phoneNumberLabel1);
             this.Controls.Add(label13);
-            this.Controls.Add(label2);
             this.Controls.Add(firstNameLabel1);
             this.Controls.Add(postalCodeLabel1);
             this.Controls.Add(lastNameLabel1);
@@ -356,20 +334,19 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBoxNewPatientPostalCode;
+        private System.Windows.Forms.TextBox textBoxNewPatientStreet;
+        private System.Windows.Forms.TextBox textBoxNewPatientStreetNo;
+        private System.Windows.Forms.TextBox textBoxNewPatientLastName;
+        private System.Windows.Forms.TextBox textBoxNewPatientPasswordConfirm;
+        private System.Windows.Forms.TextBox textBoxLogin;
+        private System.Windows.Forms.TextBox textBoxNewPatientPassword;
+        private System.Windows.Forms.TextBox textBoxNewPatientPhoneNo;
+        private System.Windows.Forms.TextBox textBoxNewPatientPesel;
         private System.Windows.Forms.Button buttonAddEmployee;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.CheckBox checkBoxNewPatientNFZ;
+        private System.Windows.Forms.ComboBox comboBoxNewPatientVoivodeship;
+        private System.Windows.Forms.ComboBox comboBoxNewPatientCity;
+        private System.Windows.Forms.TextBox textBoxNewPatientFirstName;
     }
 }

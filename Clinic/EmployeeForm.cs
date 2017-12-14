@@ -21,5 +21,12 @@ namespace Clinic
         {
 
         }
+
+        private void EmployeeForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dataSet.Employee_view' table. You can move, or remove it, as needed.
+            this.employee_viewTableAdapter.Fill(this.dataSet.Employee_view);
+
+        }
     }
 }

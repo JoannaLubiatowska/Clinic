@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label label4;
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label1;
@@ -46,25 +47,31 @@
             System.Windows.Forms.Label medicalSpecializationNameLabel;
             System.Windows.Forms.Label label3;
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.comboBoxEmployeeGroup = new System.Windows.Forms.ComboBox();
+            this.comboBoxEmployeeCity = new System.Windows.Forms.ComboBox();
+            this.comboBoxEmployeeVoivodeship = new System.Windows.Forms.ComboBox();
+            this.textBoxEmployeePasswordConfirm = new System.Windows.Forms.TextBox();
+            this.textBoxEmployeeLogin = new System.Windows.Forms.TextBox();
+            this.textBoxEmployeePassword = new System.Windows.Forms.TextBox();
+            this.textBoxEmployeePhoneNo = new System.Windows.Forms.TextBox();
+            this.textBoxEmployeeDescription = new System.Windows.Forms.TextBox();
+            this.textBoxEmployeePostalCode = new System.Windows.Forms.TextBox();
+            this.textBoxEmployeeStreet = new System.Windows.Forms.TextBox();
+            this.textBoxEmployeeStreetNo = new System.Windows.Forms.TextBox();
+            this.textBoxEmployeeFirstName = new System.Windows.Forms.TextBox();
+            this.textBoxEmployeeLastName = new System.Windows.Forms.TextBox();
+            this.textBoxEmployeePicture = new System.Windows.Forms.TextBox();
+            this.textBoxEmployeeSpecialization = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.textBoxEmployeeNewSpecialization = new System.Windows.Forms.TextBox();
+            this.comboBoxEmployeeAddSpecialization = new System.Windows.Forms.ComboBox();
             this.buttonAddEmployee = new System.Windows.Forms.Button();
+            this.buttonLoadPicture = new System.Windows.Forms.Button();
+            this.dataSet = new Clinic.DataSet();
+            this.employee_viewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employee_viewTableAdapter = new Clinic.DataSetTableAdapters.Employee_viewTableAdapter();
+            this.tableAdapterManager = new Clinic.DataSetTableAdapters.TableAdapterManager();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             label4 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
@@ -83,12 +90,15 @@
             medicalSpecializationNameLabel = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employee_viewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(12, 375);
+            label4.Location = new System.Drawing.Point(12, 389);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(70, 13);
             label4.TabIndex = 83;
@@ -97,7 +107,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(12, 349);
+            label2.Location = new System.Drawing.Point(381, 9);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(45, 13);
             label2.TabIndex = 82;
@@ -133,7 +143,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new System.Drawing.Point(12, 296);
+            label13.Location = new System.Drawing.Point(12, 336);
             label13.Name = "label13";
             label13.Size = new System.Drawing.Size(39, 13);
             label13.TabIndex = 80;
@@ -142,7 +152,7 @@
             // userGroupIDLabel
             // 
             userGroupIDLabel.AutoSize = true;
-            userGroupIDLabel.Location = new System.Drawing.Point(12, 322);
+            userGroupIDLabel.Location = new System.Drawing.Point(12, 362);
             userGroupIDLabel.Name = "userGroupIDLabel";
             userGroupIDLabel.Size = new System.Drawing.Size(39, 13);
             userGroupIDLabel.TabIndex = 79;
@@ -196,7 +206,7 @@
             // userPasswordLabel
             // 
             userPasswordLabel.AutoSize = true;
-            userPasswordLabel.Location = new System.Drawing.Point(12, 270);
+            userPasswordLabel.Location = new System.Drawing.Point(12, 310);
             userPasswordLabel.Name = "userPasswordLabel";
             userPasswordLabel.Size = new System.Drawing.Size(39, 13);
             userPasswordLabel.TabIndex = 78;
@@ -205,7 +215,7 @@
             // userLoginLabel
             // 
             userLoginLabel.AutoSize = true;
-            userLoginLabel.Location = new System.Drawing.Point(12, 244);
+            userLoginLabel.Location = new System.Drawing.Point(12, 284);
             userLoginLabel.Name = "userLoginLabel";
             userLoginLabel.Size = new System.Drawing.Size(36, 13);
             userLoginLabel.TabIndex = 77;
@@ -238,146 +248,150 @@
             label3.TabIndex = 101;
             label3.Text = "Nowa specjalność:";
             // 
-            // comboBox3
+            // comboBoxEmployeeGroup
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(115, 319);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(242, 21);
-            this.comboBox3.TabIndex = 96;
+            this.comboBoxEmployeeGroup.FormattingEnabled = true;
+            this.comboBoxEmployeeGroup.Location = new System.Drawing.Point(115, 359);
+            this.comboBoxEmployeeGroup.Name = "comboBoxEmployeeGroup";
+            this.comboBoxEmployeeGroup.Size = new System.Drawing.Size(242, 21);
+            this.comboBoxEmployeeGroup.TabIndex = 96;
             // 
-            // comboBox2
+            // comboBoxEmployeeCity
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(115, 163);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(242, 21);
-            this.comboBox2.TabIndex = 95;
+            this.comboBoxEmployeeCity.FormattingEnabled = true;
+            this.comboBoxEmployeeCity.Location = new System.Drawing.Point(115, 163);
+            this.comboBoxEmployeeCity.Name = "comboBoxEmployeeCity";
+            this.comboBoxEmployeeCity.Size = new System.Drawing.Size(242, 21);
+            this.comboBoxEmployeeCity.TabIndex = 95;
             // 
-            // comboBox1
+            // comboBoxEmployeeVoivodeship
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(115, 136);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(242, 21);
-            this.comboBox1.TabIndex = 94;
+            this.comboBoxEmployeeVoivodeship.FormattingEnabled = true;
+            this.comboBoxEmployeeVoivodeship.Location = new System.Drawing.Point(115, 136);
+            this.comboBoxEmployeeVoivodeship.Name = "comboBoxEmployeeVoivodeship";
+            this.comboBoxEmployeeVoivodeship.Size = new System.Drawing.Size(242, 21);
+            this.comboBoxEmployeeVoivodeship.TabIndex = 94;
             // 
-            // textBox3
+            // textBoxEmployeePasswordConfirm
             // 
-            this.textBox3.Location = new System.Drawing.Point(115, 293);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(242, 20);
-            this.textBox3.TabIndex = 93;
+            this.textBoxEmployeePasswordConfirm.Location = new System.Drawing.Point(115, 333);
+            this.textBoxEmployeePasswordConfirm.Name = "textBoxEmployeePasswordConfirm";
+            this.textBoxEmployeePasswordConfirm.PasswordChar = '*';
+            this.textBoxEmployeePasswordConfirm.Size = new System.Drawing.Size(242, 20);
+            this.textBoxEmployeePasswordConfirm.TabIndex = 93;
             // 
-            // textBox4
+            // textBoxEmployeeLogin
             // 
-            this.textBox4.Location = new System.Drawing.Point(115, 241);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(242, 20);
-            this.textBox4.TabIndex = 92;
+            this.textBoxEmployeeLogin.Location = new System.Drawing.Point(115, 281);
+            this.textBoxEmployeeLogin.Name = "textBoxEmployeeLogin";
+            this.textBoxEmployeeLogin.Size = new System.Drawing.Size(242, 20);
+            this.textBoxEmployeeLogin.TabIndex = 92;
             // 
-            // textBox5
+            // textBoxEmployeePassword
             // 
-            this.textBox5.Location = new System.Drawing.Point(115, 267);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(242, 20);
-            this.textBox5.TabIndex = 91;
+            this.textBoxEmployeePassword.Location = new System.Drawing.Point(115, 307);
+            this.textBoxEmployeePassword.Name = "textBoxEmployeePassword";
+            this.textBoxEmployeePassword.PasswordChar = '*';
+            this.textBoxEmployeePassword.Size = new System.Drawing.Size(242, 20);
+            this.textBoxEmployeePassword.TabIndex = 91;
             // 
-            // textBox6
+            // textBoxEmployeePhoneNo
             // 
-            this.textBox6.Location = new System.Drawing.Point(115, 189);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(242, 20);
-            this.textBox6.TabIndex = 90;
+            this.textBoxEmployeePhoneNo.Location = new System.Drawing.Point(115, 189);
+            this.textBoxEmployeePhoneNo.Name = "textBoxEmployeePhoneNo";
+            this.textBoxEmployeePhoneNo.Size = new System.Drawing.Size(242, 20);
+            this.textBoxEmployeePhoneNo.TabIndex = 90;
             // 
-            // textBox7
+            // textBoxEmployeeDescription
             // 
-            this.textBox7.Location = new System.Drawing.Point(115, 215);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(242, 20);
-            this.textBox7.TabIndex = 89;
+            this.textBoxEmployeeDescription.Location = new System.Drawing.Point(115, 215);
+            this.textBoxEmployeeDescription.Multiline = true;
+            this.textBoxEmployeeDescription.Name = "textBoxEmployeeDescription";
+            this.textBoxEmployeeDescription.Size = new System.Drawing.Size(242, 60);
+            this.textBoxEmployeeDescription.TabIndex = 89;
             // 
-            // textBox23
+            // textBoxEmployeePostalCode
             // 
-            this.textBox23.Location = new System.Drawing.Point(115, 110);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(242, 20);
-            this.textBox23.TabIndex = 88;
+            this.textBoxEmployeePostalCode.Location = new System.Drawing.Point(115, 110);
+            this.textBoxEmployeePostalCode.Name = "textBoxEmployeePostalCode";
+            this.textBoxEmployeePostalCode.Size = new System.Drawing.Size(242, 20);
+            this.textBoxEmployeePostalCode.TabIndex = 88;
             // 
-            // textBox24
+            // textBoxEmployeeStreet
             // 
-            this.textBox24.Location = new System.Drawing.Point(115, 58);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(242, 20);
-            this.textBox24.TabIndex = 87;
+            this.textBoxEmployeeStreet.Location = new System.Drawing.Point(115, 58);
+            this.textBoxEmployeeStreet.Name = "textBoxEmployeeStreet";
+            this.textBoxEmployeeStreet.Size = new System.Drawing.Size(242, 20);
+            this.textBoxEmployeeStreet.TabIndex = 87;
             // 
-            // textBox25
+            // textBoxEmployeeStreetNo
             // 
-            this.textBox25.Location = new System.Drawing.Point(115, 84);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(242, 20);
-            this.textBox25.TabIndex = 86;
+            this.textBoxEmployeeStreetNo.Location = new System.Drawing.Point(115, 84);
+            this.textBoxEmployeeStreetNo.Name = "textBoxEmployeeStreetNo";
+            this.textBoxEmployeeStreetNo.Size = new System.Drawing.Size(242, 20);
+            this.textBoxEmployeeStreetNo.TabIndex = 86;
             // 
-            // textBox26
+            // textBoxEmployeeFirstName
             // 
-            this.textBox26.Location = new System.Drawing.Point(115, 6);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(242, 20);
-            this.textBox26.TabIndex = 85;
+            this.textBoxEmployeeFirstName.Location = new System.Drawing.Point(115, 6);
+            this.textBoxEmployeeFirstName.Name = "textBoxEmployeeFirstName";
+            this.textBoxEmployeeFirstName.Size = new System.Drawing.Size(242, 20);
+            this.textBoxEmployeeFirstName.TabIndex = 85;
             // 
-            // textBox27
+            // textBoxEmployeeLastName
             // 
-            this.textBox27.Location = new System.Drawing.Point(115, 32);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(242, 20);
-            this.textBox27.TabIndex = 84;
+            this.textBoxEmployeeLastName.Location = new System.Drawing.Point(115, 32);
+            this.textBoxEmployeeLastName.Name = "textBoxEmployeeLastName";
+            this.textBoxEmployeeLastName.Size = new System.Drawing.Size(242, 20);
+            this.textBoxEmployeeLastName.TabIndex = 84;
             // 
-            // textBox1
+            // textBoxEmployeePicture
             // 
-            this.textBox1.Location = new System.Drawing.Point(115, 346);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(242, 20);
-            this.textBox1.TabIndex = 97;
+            this.textBoxEmployeePicture.Location = new System.Drawing.Point(484, 9);
+            this.textBoxEmployeePicture.Name = "textBoxEmployeePicture";
+            this.textBoxEmployeePicture.Size = new System.Drawing.Size(242, 20);
+            this.textBoxEmployeePicture.TabIndex = 97;
+            this.textBoxEmployeePicture.Text = "C:\\Users\\Asia\\Desktop\\Doctors\\Jan_Kowalski";
             // 
-            // textBox2
+            // textBoxEmployeeSpecialization
             // 
-            this.textBox2.Location = new System.Drawing.Point(115, 372);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(242, 68);
-            this.textBox2.TabIndex = 98;
+            this.textBoxEmployeeSpecialization.Location = new System.Drawing.Point(115, 386);
+            this.textBoxEmployeeSpecialization.Multiline = true;
+            this.textBoxEmployeeSpecialization.Name = "textBoxEmployeeSpecialization";
+            this.textBoxEmployeeSpecialization.Size = new System.Drawing.Size(242, 68);
+            this.textBoxEmployeeSpecialization.TabIndex = 98;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(medicalSpecializationNameLabel);
             this.groupBox1.Controls.Add(label3);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.comboBox4);
-            this.groupBox1.Location = new System.Drawing.Point(4, 446);
+            this.groupBox1.Controls.Add(this.textBoxEmployeeNewSpecialization);
+            this.groupBox1.Controls.Add(this.comboBoxEmployeeAddSpecialization);
+            this.groupBox1.Location = new System.Drawing.Point(371, 341);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(363, 84);
             this.groupBox1.TabIndex = 99;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dodaj specjalność";
             // 
-            // textBox8
+            // textBoxEmployeeNewSpecialization
             // 
-            this.textBox8.Location = new System.Drawing.Point(111, 46);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(242, 20);
-            this.textBox8.TabIndex = 99;
+            this.textBoxEmployeeNewSpecialization.Location = new System.Drawing.Point(111, 46);
+            this.textBoxEmployeeNewSpecialization.Name = "textBoxEmployeeNewSpecialization";
+            this.textBoxEmployeeNewSpecialization.Size = new System.Drawing.Size(242, 20);
+            this.textBoxEmployeeNewSpecialization.TabIndex = 99;
             // 
-            // comboBox4
+            // comboBoxEmployeeAddSpecialization
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(111, 19);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(242, 21);
-            this.comboBox4.TabIndex = 98;
+            this.comboBoxEmployeeAddSpecialization.FormattingEnabled = true;
+            this.comboBoxEmployeeAddSpecialization.Location = new System.Drawing.Point(111, 19);
+            this.comboBoxEmployeeAddSpecialization.Name = "comboBoxEmployeeAddSpecialization";
+            this.comboBoxEmployeeAddSpecialization.Size = new System.Drawing.Size(242, 21);
+            this.comboBoxEmployeeAddSpecialization.TabIndex = 98;
             // 
             // buttonAddEmployee
             // 
-            this.buttonAddEmployee.Location = new System.Drawing.Point(231, 536);
+            this.buttonAddEmployee.Location = new System.Drawing.Point(598, 431);
             this.buttonAddEmployee.Name = "buttonAddEmployee";
             this.buttonAddEmployee.Size = new System.Drawing.Size(136, 23);
             this.buttonAddEmployee.TabIndex = 100;
@@ -385,28 +399,68 @@
             this.buttonAddEmployee.UseVisualStyleBackColor = true;
             this.buttonAddEmployee.Click += new System.EventHandler(this.buttonAddEmployee_Click);
             // 
+            // buttonLoadPicture
+            // 
+            this.buttonLoadPicture.Location = new System.Drawing.Point(590, 35);
+            this.buttonLoadPicture.Name = "buttonLoadPicture";
+            this.buttonLoadPicture.Size = new System.Drawing.Size(136, 23);
+            this.buttonLoadPicture.TabIndex = 102;
+            this.buttonLoadPicture.Text = "Dodaj";
+            this.buttonLoadPicture.UseVisualStyleBackColor = true;
+            // 
+            // dataSet
+            // 
+            this.dataSet.DataSetName = "DataSet";
+            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // employee_viewBindingSource
+            // 
+            this.employee_viewBindingSource.DataMember = "Employee_view";
+            this.employee_viewBindingSource.DataSource = this.dataSet;
+            // 
+            // employee_viewTableAdapter
+            // 
+            this.employee_viewTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.MedicalServicesTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Clinic.DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(384, 80);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(350, 243);
+            this.pictureBox1.TabIndex = 103;
+            this.pictureBox1.TabStop = false;
+            // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(374, 567);
+            this.ClientSize = new System.Drawing.Size(754, 474);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.buttonLoadPicture);
             this.Controls.Add(this.buttonAddEmployee);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox23);
-            this.Controls.Add(this.textBox24);
-            this.Controls.Add(this.textBox25);
-            this.Controls.Add(this.textBox26);
-            this.Controls.Add(this.textBox27);
+            this.Controls.Add(this.textBoxEmployeeSpecialization);
+            this.Controls.Add(this.textBoxEmployeePicture);
+            this.Controls.Add(this.comboBoxEmployeeGroup);
+            this.Controls.Add(this.comboBoxEmployeeCity);
+            this.Controls.Add(this.comboBoxEmployeeVoivodeship);
+            this.Controls.Add(this.textBoxEmployeePasswordConfirm);
+            this.Controls.Add(this.textBoxEmployeeLogin);
+            this.Controls.Add(this.textBoxEmployeePassword);
+            this.Controls.Add(this.textBoxEmployeePhoneNo);
+            this.Controls.Add(this.textBoxEmployeeDescription);
+            this.Controls.Add(this.textBoxEmployeePostalCode);
+            this.Controls.Add(this.textBoxEmployeeStreet);
+            this.Controls.Add(this.textBoxEmployeeStreetNo);
+            this.Controls.Add(this.textBoxEmployeeFirstName);
+            this.Controls.Add(this.textBoxEmployeeLastName);
             this.Controls.Add(label4);
             this.Controls.Add(label2);
             this.Controls.Add(label1);
@@ -424,8 +478,12 @@
             this.Controls.Add(streetLabel1);
             this.Name = "EmployeeForm";
             this.Text = "Pracownik";
+            this.Load += new System.EventHandler(this.EmployeeForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employee_viewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -434,24 +492,30 @@
         #endregion
 
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox comboBoxEmployeeGroup;
+        private System.Windows.Forms.ComboBox comboBoxEmployeeCity;
+        private System.Windows.Forms.ComboBox comboBoxEmployeeVoivodeship;
+        private System.Windows.Forms.TextBox textBoxEmployeePasswordConfirm;
+        private System.Windows.Forms.TextBox textBoxEmployeeLogin;
+        private System.Windows.Forms.TextBox textBoxEmployeePassword;
+        private System.Windows.Forms.TextBox textBoxEmployeePhoneNo;
+        private System.Windows.Forms.TextBox textBoxEmployeeDescription;
+        private System.Windows.Forms.TextBox textBoxEmployeePostalCode;
+        private System.Windows.Forms.TextBox textBoxEmployeeStreet;
+        private System.Windows.Forms.TextBox textBoxEmployeeStreetNo;
+        private System.Windows.Forms.TextBox textBoxEmployeeFirstName;
+        private System.Windows.Forms.TextBox textBoxEmployeeLastName;
+        private System.Windows.Forms.TextBox textBoxEmployeePicture;
+        private System.Windows.Forms.TextBox textBoxEmployeeSpecialization;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.TextBox textBoxEmployeeNewSpecialization;
+        private System.Windows.Forms.ComboBox comboBoxEmployeeAddSpecialization;
         private System.Windows.Forms.Button buttonAddEmployee;
+        private System.Windows.Forms.Button buttonLoadPicture;
+        private DataSet dataSet;
+        private System.Windows.Forms.BindingSource employee_viewBindingSource;
+        private DataSetTableAdapters.Employee_viewTableAdapter employee_viewTableAdapter;
+        private DataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

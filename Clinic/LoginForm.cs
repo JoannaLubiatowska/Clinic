@@ -24,6 +24,7 @@ namespace Clinic
                 MainClinicWindow window = new MainClinicWindow();
                 window.Show();
             }
+            //MessageBox.Show("Błędny login lub hasło. Spróbuj ponownie.", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         private Boolean openNextWindow(string windowName)
         {

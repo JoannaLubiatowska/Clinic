@@ -19,12 +19,15 @@ namespace Clinic
 
         private void buttonAddService_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void buttonDeleteService_Click(object sender, EventArgs e)
-        {
-
+            DialogResult dialogResult = MessageBox.Show("Czy na pewno chcesz dodać usługę?", "Dodawanie usług", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                //do something
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
         }
 
         private void buttonEditService_Click(object sender, EventArgs e)
@@ -57,7 +60,7 @@ namespace Clinic
 
         private void buttonSaveExamination_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Zapisano pomyślnie.");
         }
 
         private void buttonMedicines_Click(object sender, EventArgs e)
@@ -136,6 +139,10 @@ namespace Clinic
 
         private void MainClinicWindow_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet.Exterminations_view' table. You can move, or remove it, as needed.
+            this.exterminations_viewTableAdapter.Fill(this.dataSet.Exterminations_view);
+            // TODO: This line of code loads data into the 'dataSet.Visits_view' table. You can move, or remove it, as needed.
+            this.visits_viewTableAdapter.Fill(this.dataSet.Visits_view);
             // TODO: This line of code loads data into the 'dataSet.MedicalServices' table. You can move, or remove it, as needed.
             this.medicalServicesTableAdapter.Fill(this.dataSet.MedicalServices);
             // TODO: This line of code loads data into the 'dataSet.Employee_view' table. You can move, or remove it, as needed.
